@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <title>Diksi</title>
+
+    <style>
+       
+        @media only screen and (max-width: 600px) {
+        body {
+            background: rgb(229,229,229);
+            background: linear-gradient(90deg, rgba(229,229,229,1) 0%, rgba(255,255,255,1) 100%);            
+            }
+            #bannerdiv{
+            display: flex;
+            align-self: center;
+            margin-right: 10vw;
+            border-radius: 5px;
+            width: 100;
+            border-radius: 5px;
+            -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background-color: #fff;
+            padding: 2vh;
+            margin-left: -50vw;
+            box-shadow: 0 2px 15px rgba(102,178,248, 0.2);
+            
+        }
+        #banner{
+            width: 100%;
+        }
+        #footer{
+            width: 95vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 10vh;
+            
+        }
+       
+        }
+        @media only screen and (min-width: 600px) {
+        body {
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%, rgba(229,229,229,1) 100%);
+            }
+            #bannerdiv{
+            display: flex;
+            align-self: center;
+            margin-right: 10vw;
+            border-radius: 5px;
+            width: 60vw;
+            border-radius: 5px;
+            -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background-color: #fff;
+            padding: 2vh;
+            margin-left: 10vw;
+            box-shadow: 0 2px 15px rgba(102,178,248, 0.2);
+        }
+        #banner{
+            width: 100%;
+        }
+        #footer{
+            width: 90vw;
+            display: flex;
+            align-items: flex-end;
+            justify-content: end;
+            position: absolute;
+            bottom: 10vh;
+        }
+        }
+        h1{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        h6{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-top: -2.5rem;
+        }
+        h3{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+        h2{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 2rem;
+            margin-top: -2rem;
+            position: absolute;
+            right: 20px;
+        }
+       
+        #head{
+            margin-left: 10vw;
+        }
+        .box {
+            position: relative;
+            display: inline-block;
+            padding: auto;
+            padding-left: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .box::after {   
+            content: "";
+            border-radius: 5px;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(102,178,248, 0.7);
+            opacity: 0;
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .box:hover {
+            -webkit-transform: scale(1.25, 1.25);
+            transform: scale(1.25, 1.25);
+        }
+
+        .box:hover::after {
+            opacity: 1;
+        }
+        #bannerdiv::after {   
+            content: "";
+            border-radius: 5px;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 8px 24px rgba(252,221,236, 1);
+            opacity: 0;
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        #bannerdiv:hover {
+            -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+        }
+
+        #bannerdiv:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="body" id="body">
+    <div id="head">
+        <h1>diksi</h1>
+        <h6>tools for developing the future of your language</h6>
+    </div>
+    <div id="bannerdiv">
+        <img src="banner.png" alt="banner" id="banner">
+    </div>
+    <div id="footer">
+    <div class="box">
+        <h3>cooming </h3>
+        <h2>soon</h2>
+    </div>
+    </div>
+    <div id="blocker">
+    </div>
+    
+</body>
+</html>
