@@ -10,119 +10,125 @@
     <!-- font cdn -->
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
     <style>
-        body{
-            font-family: 'Poppins', sans-serif;
-            background: url("bg.jpg") no-repeat;
-            background-size: 100vw 80vh;
-            background-color: black;
-            /* background-repeat: no-repeat; */
-            height: 105vh;
-        }
-        .navbar{
-            padding-left: 5vw;
-            padding-right: 5vw;
-            background-color: black;
-            height: 8vh;
+      body{
+        font-family: 'Poppins', sans-serif;
+        background-color: grey;
+        padding-top: 8vh;
+        color:white;
+      }
+      .wrapper{
+        display: flex;
+        flex-direction: row;
+      }
+      .wrapper-2{
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      .navbar{
+        background-color: red;
+      }
+
+        .images{
+          max-height: 40vh;
         }
         .title{
-            font-weight: 700;
+          align-self: center;
+          font-size: 40px;
+          margin-top: -7vh;
         }
-        .investor{
-            width: 120px;
-        }
-        .contact{
-            width: 120px;
+        .content{
+          align-self: center;
+          font-size: 20px;
         }
         .footer{
-            background-color: darkgray;
-            width: 96vw;
-            right: 0px;
+          background-color: red;
         }
-        .wrapper{
-            width: 95vw;
-            height: 65vh;
-            position: absolute;
-            top:10vh;
-            justify-content: center;
+        @media only screen and (max-width: 800px){
+          .wrapper{
             display: flex;
+            flex-direction: column;
+          }
+          .wrapper-2{
+            display: flex;
+            flex-direction: column;
+          }
+          .title{
+          margin-top: 5vh;
+          align-self: flex-start
         }
-        .slide-image{
-            width: 100%;
-            height: 70vh;
         }
-        .ro{
-            transform: rotate(180deg);
-        }
-
         @import url('https://fonts.cdnfonts.com/css/poppins');
-    </style>
+        </style>
 </head>
 <body>
     <!-- navbar -->
-    <nav class="navbar fixed-top">
-            <h2 class="title text-warning">PT Bapak Saya</h2>
-        <div class="">
-            <div class="btn btn-light investor px-3 mx-3">Investor</div>
-            <div class="btn btn-warning px-4 contact">Contact</div>
+    <nav class="navbar fixed-top px-5 bg-dark">
+            <h2 class="text-warning font-weight-bold">PT Bapak Saya</h2>
+        <div>
+            <div class="btn btn-light investor px-3" data-bs-target="#investorModal" data-bs-toggle="modal">Investor</div>
+            <div class="btn btn-warning px-4 contact" onclick="window.scrollTo(0,9999);">Contact</div>
         </div>
     </nav>
-    <div class="wrapper">
-    <div id="carouselExampleDark" class="carousel carousel slide " data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="6000">
-            <img src="bg.jpg" class="d-block slide-image ro" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5 class="text-warning">About us</h5>
-                <p>The Company is a subsidiary of PT Bapak Saya, a well-established and one of the largest business coal in Indonesia with robust experience of serving various industries and sectors. Since December 12, 2012, the Company has become a public company by listing its shares on the Indonesia Stock Exchange.</p>
-          </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="6000">
-            <img src="3.jpg" class="d-block slide-image" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-warning">Business</h5>
-              <p>runs a coal mining concession business, namely thermal coal, coking coal. As the parent of the coal mining business unit, PT Bapak Saya Resources holds ownership in a number of coal mining concessions consisting of medium and high-quality coal.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="2.jpg" class="d-block slide-image last" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-warning">Slogan</h5>
-              <p>Being a solution-oriented business partner means every PT Bapak Saya’ internal team has to be reliable in providing solutions; always striving for a solid teamwork and dedicated spirit, in order to synergize a partnership that will achieve mutual goals.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      </div>
+
+    <div class="container-fluid px-5">
+
+    <div class="wrapper px-2">
+      <h5 class="text-warning me-5 title">Bisnis</h5>
+      <p class="content me-5">PT Bapak Saya menjalankan usaha konsesi pertambangan batubara yaitu thermal coal, coking coal. Sebagai induk dari unit usaha pertambangan batubara, PT Bapak Saya Resources memegang kepemilikan di sejumlah konsesi pertambangan batubara yang terdiri dari batubara berkualitas menengah dan tinggi.</p>
+      <img src="1.jpg" class="img-thumbnail images" alt="...">
+    </div>
+
+    <div class="wrapper-2 px-2">
+      <h5 class="text-warning me-5 title">Slogan</h5>
+      <p class="content me-5">Being a solution-oriented business partner means every PT Bapak Saya’ internal team has to be reliable in providing solutions; always striving for a solid teamwork and dedicated spirit, in order to synergize a partnership that will achieve mutual goals.</p>
+      <img src="3.jpg" class="img-thumbnail images me-5" alt="...">
+    </div>
     
+    <div class="wrapper px-2">
+      <h5 class="text-warning me-5 title">About us</h5>
+      <p class="content">The Company is a subsidiary of PT Bapak Saya, a well-established and one of the largest business coal in Indonesia with robust experience of serving various industries and sectors. Since December 12, 2012, the Company has become a public company by listing its shares on the Indonesia Stock Exchange.</p>
+      <img src="2.jpg" class="img-thumbnail images me-3" alt="...">
+    </div>
+    
+  </div>
+
     <!-- footer -->
-    <div class="footer d-flex justify-content-between position-absolute bottom-0 px-5 py-3">
-        <div>
+    <div class="footer bg-dark d-flex flex-row container-fluid justify-content-between mt-5 px-5 py-5">
+          <div>
                 <h5 class="text-warning">PT Bapak Saya</h5>
                 <p class="text-light">Jl. Jalan Jalan, No. 123</p>
                 <p class="text-light">Gedung Paling Besar lt.99</p>
             </div>
-            <div style="text-align: right;" class="me-4">
+            <div class="me-4">
                 <h5 class="text-warning">Contact</h5>
                 <p class="text-light">info@ptbapaksaya.id</p>
                 <p class="text-light">08124589723</p>
             </div>
         </div>
-    </div>
 
+        <div class="modal fade" id="investorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-dark text-warning">
+                <h5 class="modal-title" id="exampleModalLabel">List Investor</h5>
+                <button type="button" class="btn-close text-warning" data-bs-dismiss="modal" aria-label="Close">X</button>
+              </div>
+              <div class="modal-body modal-dialog-scrollable text-dark">
+                <ul>
+                  <li>Setiabudi Dana Campuran</li>
+                  <li>Sucorinvest Flexi Fund</li>
+                  <li>Avrist Balanced - Amar Syariah</li>
+                  <li>Sucorinvest Stable Fund</li>
+                  <li>Bahana Dana Prima</li>
+                  <li>BNP Paribas Sri Kehati</li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
